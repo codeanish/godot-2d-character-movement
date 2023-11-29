@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpgy5sj3nsh82"]
+
+[ext_resource type="Script" path="res://AsteroidsBody.cs" id="1_diyjp"]
+[ext_resource type="Texture2D" uid="uid://dkgiesm1880to" path="res://icon.svg" id="1_q661i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ikxh"]
+size = Vector2(125, 126)
+
+[node name="AsteroidsMovement" type="Node2D"]
+
+[node name="AsteroidsBody" type="CharacterBody2D" parent="."]
+script = ExtResource("1_diyjp")
+
+[node name="Sprite2D" type="Sprite2D" parent="AsteroidsBody"]
+texture = ExtResource("1_q661i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AsteroidsBody"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_8ikxh")
