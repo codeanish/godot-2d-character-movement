@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhyoe8e5egrdt"]
+
+[ext_resource type="Texture2D" uid="uid://dkgiesm1880to" path="res://icon.svg" id="1_ekevf"]
+[ext_resource type="Script" path="res://CharacterBodySolo.cs" id="1_tff4p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfsoy"]
+size = Vector2(126, 126)
+
+[node name="SoloCharacter" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_tff4p")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_ekevf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_dfsoy")
